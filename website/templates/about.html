@@ -1,0 +1,201 @@
+{% extends "base.html" %} {% block title %}About Us Page{% endblock %}
+{% block content %}
+<style>
+    body {
+        background: #AED6F1;
+    }
+    
+    .about-fd {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .about-loans {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .services {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+     
+    .welcome {
+        text-align: left;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .intro {
+            margin: 3%;
+            position: relative;
+            font-family: "Times New Roman", Times, serif;
+            font-size: large;
+            text-align: center;
+        }
+
+    .table {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .balance {
+        font-family: "Times New Roman", Times, serif;
+        text-align: left;
+    }
+
+    .account_number {
+        font-family: "Times New Roman", Times, serif;
+        text-align: left;
+    }
+    
+</style>
+<br>
+<div class="welcome">
+    <h1>About Alpha Omega Bank</h1>
+</div>
+<div class="intro">
+    <p>
+        Alpha Omega Bank, the trusted banking service provider to over one million customers, 
+        is a private financial institution that specializes in capital transactions between 
+        public accounts on both local and global platforms.  As the seventh largest bank in 
+        the country, AOB accepts deposits from the public and provides facility of creating 
+        digital checks for transfers to accounts in other banks. AOB also offers attractive 
+        loans for both personal and business requirements and unique investment plans through 
+        a range of fixed deposits. The banking instruments and investment schemes are 
+        government approved and follow all terms and conditions. The bank does not ask 
+        for confidential information like passwords or PIN numbers and accords the highest 
+        priority to the safety and confidentiality of customer information. We value your 
+        business and appreciate the interest shown in our services. Please feel free to 
+        contact our 24x7 customer helpline or managers in person, for any further assistance.
+        Thank you for visiting Alpha Omega Bank.
+    </p>
+</div>
+<div class="services">
+    <h2>Services Offered at AOB</h2>
+</div>
+<br>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Transactions</th>
+            <th scope="col">Fixed Deposits</th>
+            <th scope="col">Loans</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <td>
+                    AOB offers current and savings accounts to its customers. The current account 
+                    at AOB is suitable for customers requiring larger number of transactions on 
+                    regular basis. It provides frequent and immediate access to funds. Current 
+                    accounts provide a high degree of liquidity and offer a broad range of customized 
+                    options to assist financial dealings. Savings accounts offer interest on deposit 
+                    balance while providing flexibility of withdrawals. Please refer to information 
+                    on savings accounts rates for further assistance.   
+                </td>
+                <td>
+                    Fixed deposits at AOB are ideally suited for investors seeking secured and higher 
+                    gains with fixed time commitments. Interest is accumulated on deposited amount 
+                    for a range of fixed time periods that can be chosen as per the customers’ requirement. 
+                    The interest rate at AOB depends on the type of fixed deposit plan and the amount 
+                    to be invested. Our relationship managers will guide you through to the deposit plan, 
+                    most suited to your financial planning and requirements. Please refer to information 
+                    on fixed deposit account plans for further assistance.
+                </td>
+                <td>
+                    AOB offers a range of personal and business loans, all at competitive rates and with 
+                    flexible repayment options. Loans are repayable on or before the loan tenure and can 
+                    be secured through a number of instruments. Interest rates vary depending on the purpose 
+                    of loan, the security offered and tenure of repayment. We also offer a number of 
+                    personalized loan services including unsecured loans, which carry a higher rate of 
+                    interest. Our relationship managers will guide you through the loan plan most suited 
+                    to your financial needs and requirements. Please refer to information on loans for 
+                    further assistance.
+                </td>
+            </tr>
+        </tbody>
+</table>
+<br>
+<div class="about-loans">
+    <h2>Loan Plans Available at AOB</h2>
+</div>
+<br>
+<table class="table table-dark">
+<thead>
+    <tr>
+        <th scope="col">Loan Index Number</th>
+        <th scope="col">Loan Type</th>
+        <th scope="col">Loan Amount</th>
+        <th scope="col">Tenure</th>
+        <th scope="col">Interest Rate</th>
+        <th scope="col">Minimum Account Balance</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr>
+        <th scope="row">1</th>
+            <td>Loan Plan 1</td>
+            <td>Upto 800$</td>
+            <td>1 Days</td>
+            <td>2%</td>
+            <td>1000$</td>
+        </tr>
+        <tr>
+        <th scope="row">2</th>
+            <td>Loan Plan 2</td>
+            <td>Upto 1000$</td>
+            <td>2 Days</td>
+            <td>2.5%</td>
+            <td>3500$</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Loan Plan 3</td>
+            <td>Upto 5000$</td>
+            <td>7 Days</td>
+            <td>3%</td>
+            <td>8000$</td>
+        </tr>  
+    </tbody>
+</table>
+<br>
+<div class="about-fd">
+    <h2>Fixed Deposit Plans Available at AOB</h2>
+</div>
+<br>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">FD Index Number</th>
+            <th scope="col">Fixed Deposit Type</th>
+            <th scope="col">Investment Amount</th>
+            <th scope="col">Tenure</th>
+            <th scope="col">Interest Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">1</th>
+            <td>FD Plan 1</td>
+            <td>Min 100$ & Max 500$</td>
+            <td>1 Day</td>
+            <td>1%</td>
+        </tr>
+        <tr>
+        <th scope="row">2</th>
+            <td>FD Plan 2</td>
+            <td>Min 1000$ & Max 2000$</td>
+            <td>3 Days</td>
+            <td>2%</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>FD Plan 3</td>
+            <td>Min 2000$ & Max $5000</td>
+            <td>7 Days</td>
+            <td>3%</td>
+        </tr>  
+    </tbody>
+</table>
+{% endblock %} 

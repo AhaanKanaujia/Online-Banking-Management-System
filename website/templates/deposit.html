@@ -1,0 +1,90 @@
+{% extends "base.html" %} {% block title %}Deposit Page{% endblock %}
+{% block content %}
+<style>
+    body {
+        background: #AED6F1;
+    }
+    .deposit {
+        font-family: "Times New Roman", Times, serif;
+        font-size: large;
+    }
+
+    .prev_dep {
+        font-family: "Times New Roman", Times, serif;
+        font-size: large;
+        text-align: center;
+    }
+
+    .previous-deposits {
+        position: relative;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .dep-heading {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+</style>
+<br>
+<div class="dep-heading">
+    <h2><strong>Make a Deposit</strong></h2>
+</div>
+<div class="deposit">
+    <br>
+    <form method="POST">
+        <div>
+            <label name="amount" id="amount" class="form-class">Amount to be Deposited</label>     
+            <input name="amount" placeholder="Enter Amount" id="amount" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="source" id="source" class="form-class">Source of Money to be Deposited</label>     
+            <input name="source" placeholder="Enter Source" style="width: 100%" id="source" class="form-class" type="text">
+        </div>
+        <br>
+        <div>
+            <label name="note" id="note" class="form-class">Remarks regarding Deposit</label>     
+            <input name="note" placeholder="Enter Remarks" id="note" style="width: 100%" class="form-class" type="text">   
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-primary"><strong>Make Deposit</strong></button>
+        </div>
+    </form>
+</div>
+<br><br>
+<div class="prev_dep">
+    <h2><strong>Previous Deposits</strong></h2>
+</div>
+<br>
+<div class="previous-deposits">
+    <div class="table table-dark">
+        <table>
+            <thead>
+                <tr> 
+                    <th scope="col">Deposit ID</th>
+                    <th scope="col">Amount Deposited</th>
+                    <th scope="col">Source of Money</th>
+                    <th scope="col">Time of Transaction</th>
+                    <th scope="col">Remarks</th>
+                    <th scope="col">User ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for deposit in user.deposits %}
+                    <tr>
+                        <td>{{deposit.id}}</td>
+                        <td>{{deposit.amount}}</td>
+                        <td>{{deposit.source}}</td>
+                        <td>{{deposit.time}}</td>
+                        <td>{{deposit.note}}</td>
+                        <td>{{deposit.user_id}}</td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

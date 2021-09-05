@@ -1,0 +1,97 @@
+{% extends "base.html" %} {% block title %}Repay Loan Page{% endblock %}
+{% block content %}
+<style>
+    body {
+        background: #AED6F1;
+    }
+    .fd-heading {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .fd {
+        font-family: "Times New Roman", Times, serif;
+        font-size: large;
+    }
+
+    .fixed-deposits {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .table {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+</style>
+<br>
+<div class="fd-heading">
+    <h2><strong>Invest in Fixed Deposit</strong></h2>
+</div>
+<div class="fd">
+    <br>
+    <form method="POST">
+        <div>
+            <label name="fd_index" id="fd_index" class="form-class">FD Plan Index Number</label>     
+            <input name="fd_index" placeholder="Enter FD Plan Index Number" id="fd_index" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="amount" id="amount" class="form-class">Amount</label>     
+            <input name="amount" placeholder="Enter Amount" id="amount" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="note" id="note" class="form-class">Remarks regarding Fixed Deposit Investment</label>     
+            <input name="note" placeholder="Enter Remarks" id="note" style="width: 100%" class="form-class" type="text">   
+        </div>
+        <br>
+        <div>
+            <label name="password" id="password" class="form-class">Password</label>     
+            <input name="password" placeholder="Enter Password for Confirmation" id="password" class="form-class" style="width: 100%" type="password">  
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-primary"><strong>Confirm Investment</strong></button>
+        </div>
+    </form>
+</div>
+<div class="fixed-deposits">
+    <h2>Fixed Deposit Options</h2>
+</div>
+<br>
+<table class="table table-dark">
+<thead>
+    <tr>
+        <th scope="col">FD Index Number</th>
+        <th scope="col">Fixed Deposit Type</th>
+        <th scope="col">Investment Amount</th>
+        <th scope="col">Tenure</th>
+        <th scope="col">Interest Rate</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr>
+        <th scope="row">1</th>
+            <td>FD Plan 1</td>
+            <td>Min 100$ & Max 500$</td>
+            <td>1 Day</td>
+            <td>1%</td>
+        </tr>
+        <tr>
+        <th scope="row">2</th>
+            <td>FD Plan 2</td>
+            <td>Min 1000$ & Max 2000$</td>
+            <td>3 Days</td>
+            <td>2%</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>FD Plan 3</td>
+            <td>Min 2000$ & Max $5000</td>
+            <td>7 Days</td>
+            <td>3%</td>
+        </tr>  
+    </tbody>
+</table>
+{% endblock %}

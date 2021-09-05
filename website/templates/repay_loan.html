@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% block title %}Repay Loan Page{% endblock %}
+{% block content %}
+<style>
+    body {
+        background: #AED6F1;
+    }
+    
+    .previous-loan-heading {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .previous-loans {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .repay-loan-heading {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .repay-loan {
+        font-family: "Times New Roman", Times, serif;
+        text-align: left;
+        font-size: large;
+    }
+
+</style>
+<br>
+<div class="repay-loan-heading">
+    <h2><strong>Repay a Loan</strong></h2>
+</div>
+<div class="repay-loan">
+    <br>
+    <form method="POST">
+        <div>
+            <label name="loan_id" id="loan_id" class="form-class">Loan ID</label>     
+            <input name="loan_id" placeholder="Enter Loan ID" id="loan_id" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="amount" id="amount" class="form-class">Repayment Amount</label>     
+            <input name="amount" placeholder="Enter Amount to Repay" id="amount" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="password" id="password" class="form-class">Password</label>     
+            <input name="password" placeholder="Enter Password for Confirmation" id="password" class="form-class" style="width: 100%" type="password">  
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-primary"><strong>Confirm Repayment</strong></button>
+        </div>
+    </form>
+</div>
+<br>
+<div class="previous-loan-heading">
+    <h2><strong>Previous and Current Loans</strong></h2>
+</div>
+<br>
+<div class="previous-loans">
+    <div class="table table-dark">
+        <table>
+            <thead>
+                <tr> 
+                    <th scope="col">Loan ID</th>
+                    <th scope="col">Loan Index Number</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Amount to Repay</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Time of Transaction</th>
+                    <th scope="col">Remarks</th>
+                    <th scope="col">Loan Taker ID</th>
+                </tr>
+            </thead>
+                <tbody>
+                    {% for loan in user.loans %}
+                    <tr>
+                        <td>{{loan.id}}</td>
+                        <td>{{loan.loan_index}}</td>
+                        <td>{{loan.amount}}</td>
+                        <td>{{loan.repay_amount}}</td>
+                        <td>{{loan.status}}</td>
+                        <td>{{loan.time}}</td>
+                        <td>{{loan.note}}</td>
+                        <td>{{loan.user_id}}</td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

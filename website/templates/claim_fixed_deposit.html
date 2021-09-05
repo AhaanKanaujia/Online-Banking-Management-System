@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% block title %}Repay Loan Page{% endblock %}
+{% block content %}
+<style>
+    body {
+        background: #AED6F1;
+    }
+    .previous-fd-heading {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .previous-fd {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .claim-fd-heading {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+    }
+
+    .claim-fd {
+        font-family: "Times New Roman", Times, serif;
+        text-align: left;
+        font-size: large;
+    }
+
+</style>
+<br>
+<div class="claim-fd-heading">
+    <h2><strong>Claim Fixed Deposit</strong></h2>
+</div>
+<div class="claim-fd">
+    <br>
+    <form method="POST">
+        <div>
+            <label name="fd_id" id="fd_id" class="form-class">Fixed Deposit ID</label>     
+            <input name="fd_id" placeholder="Enter Fixed Deposit ID" id="fd_id" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="amount" id="amount" class="form-class">Amount to Claim</label>     
+            <input name="amount" placeholder="Enter Amount to Claim" id="amount" class="form-class" style="width: 100%" type="number">  
+        </div>
+        <br>
+        <div>
+            <label name="password" id="password" class="form-class">Password</label>     
+            <input name="password" placeholder="Enter Password for Confirmation" id="password" class="form-class" style="width: 100%" type="password">  
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-primary"><strong>Claim Amount</strong></button>
+        </div>
+    </form>
+</div>
+<br>
+<div class="previous-fd-heading">
+    <h2><strong>Previous and Current Loans</strong></h2>
+</div>
+<br>
+<div class="previous-fd">
+    <div class="table table-dark">
+        <table>
+            <thead>
+                <tr> 
+                    <th scope="col">Fixed Deposit ID</th>
+                    <th scope="col">FD Index Number</th>
+                    <th scope="col">Amount Invested</th>
+                    <th scope="col">Amount to Claim</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Time of Transaction</th>
+                    <th scope="col">Remarks</th>
+                    <th scope="col">FD Investor ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for fd in user.fixed_deposits %}
+                    <tr>
+                        <td>{{fd.id}}</td>
+                        <td>{{fd.fd_index}}</td>
+                        <td>{{fd.amount}}</td>
+                        <td>{{fd.claim_amount}}</td>
+                        <td>{{fd.status}}</td>
+                        <td>{{fd.time}}</td>
+                        <td>{{fd.note}}</td>
+                        <td>{{fd.user_id}}</td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
