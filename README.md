@@ -19,4 +19,4 @@ flask run
 
 A message saying "Running on http://127.0.0.1:5000/" should appear. Click the URL to go to the website. The email address for the test account is 
 "johnwick@gmail.com" with password "john123". Feel free to explore the functionalities of the website by playing around with making transactions, loans, and 
-investments. You may also create a new account by signing up. 
+investments. You may also create a new account by signing up. Once you are done with the website, click 'control c' to close the website. 
