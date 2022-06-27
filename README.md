@@ -14,8 +14,10 @@ any form of SQL or JS code entered in all input fields and disregards any such e
 To view the website for yourself, clone the repository to your local system. Next, in VSCode, open the cloned repository using the open folder option. 
 To run the website on your local network, enter the following commands into the terminal. 
 
+```
 export FLASK_APP=app
 flask run
+```
 
 A message saying "Running on http://127.0.0.1:5000/" should appear. Click the URL to go to the website. The email address for the test account is 
 "johnwick@gmail.com" with password "john123". Feel free to explore the functionalities of the website by playing around with making transactions, loans, and 
